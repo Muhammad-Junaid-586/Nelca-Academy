@@ -78,7 +78,7 @@ export default function Navbar() {
                     : ""
                 }`}
               >
-                Courses ▼
+                Courses 
               </button>
 
               <ul className="absolute left-0 top-full mt-2 w-60 bg-white shadow-lg border rounded-md overflow-hidden opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 z-50">
@@ -155,7 +155,7 @@ export default function Navbar() {
               onClick={() => setMobileCoursesOpen(!mobileCoursesOpen)}
               className="flex items-center justify-between w-full px-3 py-2 hover:bg-gray-100 rounded-md transition"
             >
-              Courses ▼
+              Courses 
             </button>
 
             {mobileCoursesOpen && (

@@ -100,9 +100,11 @@ export default function AboutInstitute() {
           </div>
 
           {/* BUTTON */}
-          <Link href="/about" className="mt-10 bg-blue-900 text-white px-7 py-3 rounded-lg shadow-md hover:bg-blue-800 transition duration-300">
+          <div className="mt-6">
+            <Link href="/about" className="mt-12 bg-blue-900 text-white px-7 py-3 rounded-lg shadow-md hover:bg-blue-800 transition duration-300">
             Learn More About Us →
           </Link>
+          </div>
 
         </div>
       </div>
