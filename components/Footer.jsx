@@ -110,7 +110,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://youtube.com"
+              href="http://www.youtube.com/@technicalrizwan689"
               target="_blank"
               className="bg-[#12364d] p-3 rounded-lg hover:bg-red-600 transition"
             >

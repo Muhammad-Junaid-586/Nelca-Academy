@@ -1,10 +1,10 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Laptop, Users, BookOpen } from "lucide-react";
-import { courses } from "../app/courses/coursesData"; // make sure this exports all your courses
+import { courses } from "../app/courses/coursesData"; // adjust path if needed
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,7 +13,6 @@ export default function Navbar() {
 
   const isActive = (href) => pathname === href;
 
-  // Reordered navLinks so Courses comes after About
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -23,11 +22,15 @@ export default function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
 
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    setMobileCoursesOpen(false);
+  };
+
   return (
     <nav className="w-full bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-20">
-
           {/* Logo */}
           <div className="flex items-center gap-3">
             <Image
@@ -52,7 +55,6 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <ul className="hidden lg:flex items-center gap-2 text-gray-700 font-medium">
-
             {/* Home & About */}
             {navLinks.slice(0, 2).map((link) => (
               <li key={link.href} className="rounded-md">
@@ -78,7 +80,7 @@ export default function Navbar() {
                     : ""
                 }`}
               >
-                Courses 
+                Courses
               </button>
 
               <ul className="absolute left-0 top-full mt-2 w-60 bg-white shadow-lg border rounded-md overflow-hidden opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 z-50">
@@ -110,12 +112,14 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-
           </ul>
 
-          {/* Apply Button */}
+          {/* Apply Button (Desktop) */}
           <div className="hidden lg:block">
-            <Link href='/admissions' className="bg-blue-900 text-white px-6 py-2.5 rounded-md font-medium hover:bg-blue-800 transition duration-300 shadow-sm">
+            <Link
+              href="/admissions"
+              className="bg-blue-900 text-white px-6 py-2.5 rounded-md font-medium hover:bg-blue-800 transition duration-300 shadow-sm"
+            >
               Apply Now
             </Link>
           </div>
@@ -126,7 +130,11 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle Mobile Menu"
           >
-            {mobileOpen ? <span className="text-xl font-bold">✕</span> : <span className="text-xl font-bold">☰</span>}
+            {mobileOpen ? (
+              <span className="text-xl font-bold">✕</span>
+            ) : (
+              <span className="text-xl font-bold">☰</span>
+            )}
           </button>
         </div>
       </div>
@@ -142,6 +150,7 @@ export default function Navbar() {
             <li key={link.href} className="rounded-md">
               <Link
                 href={link.href}
+                onClick={closeMobileMenu}
                 className="px-3 py-2 hover:bg-gray-100 rounded-md transition"
               >
                 {link.name}
@@ -155,7 +164,7 @@ export default function Navbar() {
               onClick={() => setMobileCoursesOpen(!mobileCoursesOpen)}
               className="flex items-center justify-between w-full px-3 py-2 hover:bg-gray-100 rounded-md transition"
             >
-              Courses 
+              Courses
             </button>
 
             {mobileCoursesOpen && (
@@ -165,8 +174,13 @@ export default function Navbar() {
                     key={course.slug}
                     className="flex items-center gap-2 rounded-md hover:bg-gray-100 transition px-2 py-1"
                   >
-                    <course.icon size={18} />{" "}
-                    <Link href={`/courses/${course.slug}`}>{course.title}</Link>
+                    <course.icon size={18} />
+                    <Link
+                      href={`/courses/${course.slug}`}
+                      onClick={closeMobileMenu}
+                    >
+                      {course.title}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -177,6 +191,7 @@ export default function Navbar() {
             <li key={link.href} className="rounded-md">
               <Link
                 href={link.href}
+                onClick={closeMobileMenu}
                 className="px-3 py-2 hover:bg-gray-100 rounded-md transition"
               >
                 {link.name}
@@ -184,7 +199,11 @@ export default function Navbar() {
             </li>
           ))}
 
-          <Link href="/admissions" className="bg-blue-900 text-white px-6 py-3 rounded-md mt-3 hover:bg-blue-800 transition">
+          <Link
+            href="/admissions"
+            onClick={closeMobileMenu}
+            className="bg-blue-900 text-white px-6 py-3 rounded-md mt-3 hover:bg-blue-800 transition"
+          >
             Apply Now
           </Link>
         </ul>

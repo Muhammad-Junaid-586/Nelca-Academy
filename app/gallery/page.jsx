@@ -89,6 +89,10 @@ export default function Gallery() {
         title="Gallery"
         description="Explore our classrooms, activities, and events that showcase the learning environment at Nelca Academy."
         icon={<Images size={40} />}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Gallery" },
+        ]}
       />
 
       <section className="bg-gray-50 min-h-screen py-20">

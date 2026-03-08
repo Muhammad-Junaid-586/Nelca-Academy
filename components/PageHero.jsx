@@ -9,7 +9,7 @@ const PageHero = ({
   bgColor = "bg-[#103759]",
 }) => {
   return (
-    <section className={`w-full ${bgColor} text-white py-20 md:py-24`}>
+    <section className={`w-full ${bgColor} text-white py-16 md:py-22`}>
       <div className="max-w-6xl mx-auto px-4 text-center">
 
         {/* Icon */}

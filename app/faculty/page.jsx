@@ -65,7 +65,10 @@ export default function Faculty() {
               title="Our Faculty & Trainers"
               description="Meet the professional and experienced educators behind our academic excellence at The Nation English Language & Computer Academy."
              icon = { <GraduationCap size={40} />}
-              
+              breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Faculty" },
+        ]}
             />
 
             <section className="bg-gray-50 min-h-screen py-20">

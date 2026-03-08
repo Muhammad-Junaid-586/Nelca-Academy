@@ -9,7 +9,10 @@ export default function AdmissionsPage() {
       <PageHero
       title="Admissions at NELCA"
       description="Begin your journey to a better future. Our simple 5-step process gets you enrolled quickly and easily."
-      
+      breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Admissions" },
+        ]}
       
     />
       <Admissions />
