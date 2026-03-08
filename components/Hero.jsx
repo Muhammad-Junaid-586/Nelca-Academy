@@ -26,7 +26,7 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-yellow-400/40 px-4 sm:px-6 py-2 rounded-full text-yellow-300 text-xs sm:text-sm shadow">
             <Star size={16} />
-            Established 2000 · Trusted by 5,000+ Students
+            Established 2015 · Trusted by 5,000+ Students
           </div>
 
           {/* Heading */}

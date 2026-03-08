@@ -44,7 +44,7 @@ export default function AboutInstitute() {
           </p>
 
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-            Building Bright Futures Since 2000
+            Building Bright Futures Since 2015
           </h2>
 
           <p className="text-gray-600 leading-relaxed mb-6">
