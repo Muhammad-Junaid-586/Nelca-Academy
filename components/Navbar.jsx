@@ -42,7 +42,7 @@ export default function Navbar() {
             />
            <div className="leading-tight">
   {/* Mobile Text */}
-  <h1 className="text-[16px] font-semibold text-gray-800 sm:hidden">
+  <h1 className="text-[16px] font-semibold text-gray-800 sm:hidden text-outline">
     The NELCA
   </h1>
 
