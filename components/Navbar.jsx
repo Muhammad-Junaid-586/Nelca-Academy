@@ -40,17 +40,25 @@ export default function Navbar() {
               alt="The Nation English Logo"
               className="rounded-full border"
             />
-            <div className="hidden sm:block leading-tight">
-              <h1 className="text-[17px] font-semibold text-gray-800">
-                The Nation English
-              </h1>
-              <h2 className="text-[15px] font-semibold text-gray-800">
-                Language & Computer
-              </h2>
-              <p className="text-xs text-gray-500">
-                Academy Kahi Kacha Pakka
-              </p>
-            </div>
+           <div className="leading-tight">
+  {/* Mobile Text */}
+  <h1 className="text-[16px] font-semibold text-gray-800 sm:hidden">
+    The NELCA
+  </h1>
+
+  {/* Desktop Text */}
+  <div className="hidden sm:block">
+    <h1 className="text-[17px] font-semibold text-gray-800">
+      The Nation English
+    </h1>
+    <h2 className="text-[15px] font-semibold text-gray-800">
+      Language & Computer
+    </h2>
+    <p className="text-xs text-gray-500">
+      Academy Kahi Kacha Pakka
+    </p>
+  </div>
+</div>
           </div>
 
           {/* Desktop Menu */}
