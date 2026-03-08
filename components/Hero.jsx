@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 py-20 sm:py-24 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
         {/* LEFT SIDE */}
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

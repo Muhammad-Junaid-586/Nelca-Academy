@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import { CheckCircle, Monitor, Award } from "lucide-react";
+import { CheckCircle, Monitor } from "lucide-react";
 import Link from "next/link";
 
 export default function AboutInstitute() {
@@ -8,7 +10,12 @@ export default function AboutInstitute() {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT IMAGE SECTION */}
-        <div className="relative">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          data-aos-once="true"
+          className="relative"
+        >
           <div className="overflow-hidden rounded-2xl shadow-xl">
             <Image
               src="/nelca.jpeg"
@@ -27,7 +34,11 @@ export default function AboutInstitute() {
         </div>
 
         {/* RIGHT CONTENT */}
-        <div>
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          data-aos-once="true"
+        >
           <p className="uppercase tracking-widest text-sm text-amber-600 font-semibold mb-2">
             About Our Institute
           </p>
@@ -102,8 +113,8 @@ export default function AboutInstitute() {
           {/* BUTTON */}
           <div className="mt-6">
             <Link href="/about" className="mt-12 bg-blue-900 text-white px-7 py-3 rounded-lg shadow-md hover:bg-blue-800 transition duration-300">
-            Learn More About Us →
-          </Link>
+              Learn More About Us →
+            </Link>
           </div>
 
         </div>

@@ -18,12 +18,12 @@ const features = [
     bg: "bg-indigo-100",
   },
   {
-  icon: FileText,
-  title: "Tuition Classes (1st – 12th)",
-  desc: "Comprehensive tuition classes from Grade 1 to 12 with experienced teachers, concept-based learning, and strong preparation for school and board exams.",
-  color: "text-orange-600",
-  bg: "bg-orange-100",
-},
+    icon: FileText,
+    title: "Tuition Classes (1st – 12th)",
+    desc: "Comprehensive tuition classes from Grade 1 to 12 with experienced teachers, concept-based learning, and strong preparation for school and board exams.",
+    color: "text-orange-600",
+    bg: "bg-orange-100",
+  },
   {
     icon: Lightbulb,
     title: "Practical Training",
@@ -60,7 +60,11 @@ export default function WhyChoose() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-        <div className="text-center mb-16">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <p className="text-sm font-semibold tracking-widest text-amber-600 uppercase">
             Why Choose NELCA?
           </p>
@@ -84,6 +88,10 @@ export default function WhyChoose() {
             return (
               <div
                 key={index}
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay={index * 150} // stagger animation
+                data-aos-once="true"
                 className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition duration-300"
               >
                 {/* Icon */}

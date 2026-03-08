@@ -89,7 +89,11 @@ export default function AdmissionsPage() {
     <main className="min-h-screen bg-slate-50">
       <section className="w-full py-12 px-4 sm:px-6 lg:px-10">
         {/* Header */}
-        <div className="max-w-4xl mx-auto mb-10 text-center">
+        <div
+          className="max-w-4xl mx-auto mb-10 text-center"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 mb-3">
             Admissions & Enrollment Process
           </h1>
@@ -100,7 +104,12 @@ export default function AdmissionsPage() {
         </div>
 
         {/* Course badge */}
-        <div className="max-w-3xl mx-auto mb-8 text-center">
+        <div
+          className="max-w-3xl mx-auto mb-8 text-center"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="100"
+        >
           <span className="inline-flex items-center rounded-full bg-emerald-50 px-5 py-1.5 text-sm font-medium text-emerald-700 border border-emerald-100">
             Course: {course.label}
           </span>
@@ -108,9 +117,13 @@ export default function AdmissionsPage() {
 
         {/* 5-step process */}
         <div className="max-w-5xl mx-auto grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-5">
-          {steps.map((step) => (
+          {steps.map((step, index) => (
             <div
               key={step.id}
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay={index * 150}
+              data-aos-once="true"
               className="flex flex-col items-center lg:items-start bg-white rounded-xl shadow-md border border-slate-200 p-5 hover:shadow-lg transition"
             >
               <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-600 text-white font-semibold mb-3 text-sm sm:text-lg">
@@ -126,12 +139,21 @@ export default function AdmissionsPage() {
           ))}
         </div>
 
-        <div className="max-w-4xl mx-auto my-10 border-t border-dashed border-slate-300" />
+        <div
+          className="max-w-4xl mx-auto my-10 border-t border-dashed border-slate-300"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
 
         {/* Eligibility & Requirements */}
         <div className="max-w-5xl mx-auto grid gap-6 md:grid-cols-2">
           {/* Eligibility */}
-          <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <div
+            className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-8"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          >
             <h2 className="text-lg sm:text-xl font-semibold text-slate-800 mb-4">
               Eligibility Criteria
             </h2>
@@ -148,7 +170,12 @@ export default function AdmissionsPage() {
           </div>
 
           {/* Requirements */}
-          <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <div
+            className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-8"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
             <h2 className="text-lg sm:text-xl font-semibold text-slate-800 mb-4">
               Required Documents
             </h2>
@@ -166,14 +193,19 @@ export default function AdmissionsPage() {
         </div>
 
         {/* CTA */}
-        <div className="max-w-4xl mx-auto mt-12 text-center">
+        <div
+          className="max-w-4xl mx-auto mt-12 text-center"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="300"
+        >
           <p className="text-sm sm:text-base text-slate-700 mb-4">
             If you have any questions about the admission process or
             course‑specific requirements, please contact our admissions office
             before applying.
           </p>
-          <Link href="/contact"
-            type="button"
+          <Link
+            href="/contact"
             className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 text-sm sm:text-base font-semibold text-white shadow-sm hover:bg-emerald-700 transition-colors"
           >
             Start Admission Form

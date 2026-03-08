@@ -108,6 +108,10 @@ export default function CoursesSection() {
             return (
               <div
                 key={index}
+                data-aos="zoom-in"
+                data-aos-duration="800"
+                data-aos-delay={index * 100} // stagger effect
+                data-aos-once="true"
                 className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden group"
               >
                 {/* TOP SECTION */}
